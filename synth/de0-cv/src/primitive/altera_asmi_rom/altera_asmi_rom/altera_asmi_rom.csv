@@ -1,0 +1,18 @@
+# system info altera_asmi_rom on 2015.11.25.01:21:32
+system_info:
+name,value
+DEVICE,5CEBA4F23C7
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1448382091
+#
+#
+# Files generated for altera_asmi_rom on 2015.11.25.01:21:32
+files:
+filepath,kind,attributes,module,is_top
+simulation/altera_asmi_rom.v,VERILOG,,altera_asmi_rom,true
+simulation/submodules/altera_asmi_rom_asmi_parallel_0.v,VERILOG,,altera_asmi_rom_asmi_parallel_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+altera_asmi_rom.asmi_parallel_0,altera_asmi_rom_asmi_parallel_0

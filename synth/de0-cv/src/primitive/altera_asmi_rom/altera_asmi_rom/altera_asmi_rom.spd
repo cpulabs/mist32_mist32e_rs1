@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/altera_asmi_rom_asmi_parallel_0.v"
+   type="VERILOG"
+   library="asmi_parallel_0" />
+ <file path="simulation/altera_asmi_rom.v" type="VERILOG" />
+ <topLevel name="altera_asmi_rom" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

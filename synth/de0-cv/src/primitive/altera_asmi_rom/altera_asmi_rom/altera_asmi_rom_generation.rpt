@@ -1,0 +1,52 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\cygwin64\home\Takahiro\MIST32_MIST32ERS0\synth\de0-cv\src\primitive\altera_asmi_rom\altera_asmi_rom.qsys --simulation=VERILOG --output-directory=C:\cygwin64\home\Takahiro\MIST32_MIST32ERS0\synth\de0-cv\src\primitive\altera_asmi_rom\altera_asmi_rom\simulation --family="Cyclone V" --part=5CEBA4F23C7
+Progress: Loading altera_asmi_rom/altera_asmi_rom.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 15.1]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: altera_asmi_rom: Generating altera_asmi_rom "altera_asmi_rom" for SIM_VERILOG
+Info: asmi_parallel_0: generating top-level entity altera_asmi_rom_asmi_parallel_0
+Info: asmi_parallel_0: "altera_asmi_rom" instantiated altera_asmi_parallel "asmi_parallel_0"
+Info: altera_asmi_rom: Done "altera_asmi_rom" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\cygwin64\home\Takahiro\MIST32_MIST32ERS0\synth\de0-cv\src\primitive\altera_asmi_rom\altera_asmi_rom\altera_asmi_rom.spd --output-directory=C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\cygwin64\home\Takahiro\MIST32_MIST32ERS0\synth\de0-cv\src\primitive\altera_asmi_rom\altera_asmi_rom\altera_asmi_rom.spd --output-directory=C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/src/primitive/altera_asmi_rom/altera_asmi_rom/simulation/.
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\cygwin64\home\Takahiro\MIST32_MIST32ERS0\synth\de0-cv\src\primitive\altera_asmi_rom\altera_asmi_rom.qsys --synthesis=VERILOG --output-directory=C:\cygwin64\home\Takahiro\MIST32_MIST32ERS0\synth\de0-cv\src\primitive\altera_asmi_rom\altera_asmi_rom\synthesis --family="Cyclone V" --part=5CEBA4F23C7
+Progress: Loading altera_asmi_rom/altera_asmi_rom.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 15.1]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: altera_asmi_rom: Generating altera_asmi_rom "altera_asmi_rom" for QUARTUS_SYNTH
+Info: asmi_parallel_0: generating top-level entity altera_asmi_rom_asmi_parallel_0
+Info: asmi_parallel_0: "altera_asmi_rom" instantiated altera_asmi_parallel "asmi_parallel_0"
+Info: altera_asmi_rom: Done "altera_asmi_rom" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\takahiro\Desktop\MIST32_MIST32ERS1\synth\de2-115\src\primitive\altera_asmi_rom\altera_asmi_rom.qsys --block-symbol-file --output-directory=C:\Users\takahiro\Desktop\MIST32_MIST32ERS1\synth\de2-115\src\primitive\altera_asmi_rom\altera_asmi_rom --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading altera_asmi_rom/altera_asmi_rom.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 15.1]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\takahiro\Desktop\MIST32_MIST32ERS1\synth\de2-115\src\primitive\altera_asmi_rom\altera_asmi_rom.qsys --synthesis=VERILOG --output-directory=C:\Users\takahiro\Desktop\MIST32_MIST32ERS1\synth\de2-115\src\primitive\altera_asmi_rom\altera_asmi_rom\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading altera_asmi_rom/altera_asmi_rom.qsys
+Progress: Reading input file
+Progress: Adding asmi_parallel_0 [altera_asmi_parallel 15.1]
+Progress: Parameterizing module asmi_parallel_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: altera_asmi_rom: Generating altera_asmi_rom "altera_asmi_rom" for QUARTUS_SYNTH
+Info: asmi_parallel_0: generating top-level entity altera_asmi_rom_asmi_parallel_0
+Info: asmi_parallel_0: "altera_asmi_rom" instantiated altera_asmi_parallel "asmi_parallel_0"
+Info: altera_asmi_rom: Done "altera_asmi_rom" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

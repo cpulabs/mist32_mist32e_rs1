@@ -1,0 +1,5 @@
+PLL_Name	global_clock:GLOBAL_CLOCK|system_pll:VGA_PLL|altpll:altpll_component|system_pll_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+
