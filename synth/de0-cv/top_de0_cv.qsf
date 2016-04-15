@@ -339,7 +339,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
-set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE signal_tap.stp
 set_location_assignment PIN_N16 -to GPIO[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0]
@@ -413,9 +413,14 @@ set_location_assignment PIN_T17 -to GPIO[34]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[34]
 set_location_assignment PIN_T15 -to GPIO[35]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35]
+set_location_assignment PIN_J17 -to UART_TXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD
+set_location_assignment PIN_K16 -to UART_RXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_top_control_layer_512.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../../src/device/mmc/mmc_top.sv
-set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_spi_transfer_layer.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../../src/device/mmc/mmc_spi_initial_clock.sv
+set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_spi_async_transfer_layer.v
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_cmd_control_layer_initial.v
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_cmd_control_layer_cmd24.v
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_cmd_control_layer_cmd17.v
@@ -424,6 +429,8 @@ set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_cmd_control_la
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_cmd_control_layer_cmd0.v
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_cmd_control_layer_512.v
 set_global_assignment -name VERILOG_FILE ../../src/device/mmc/mmc_buffer_512b.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../../src/device/mmc/mmc_async_fifo_double_flipflop.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../src/device/mmc/mmc_async_fifo.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../src/device/vga_sdram/vga_arbiter_matching_queue.sv
 set_global_assignment -name SDC_FILE top_de0_cv.out.sdc
 set_global_assignment -name QIP_FILE src/primitive/altera_primitive_sync_fifo_showahead_97in_97out_32depth/altera_primitive_sync_fifo_showahead_97in_97out_32depth.qip
@@ -514,9 +521,24 @@ set_global_assignment -name SIP_FILE src/primitive/system_pll/system_pll.sip
 set_global_assignment -name QIP_FILE src/primitive/altera_primitive_dualram_512bit_16word/altera_primitive_dualram_512bit_16word.qip
 set_global_assignment -name SIGNALTAP_FILE signal_tap.stp
 set_global_assignment -name SOURCE_FILE db/top_de0_cv.cmp.rdb
-set_location_assignment PIN_J17 -to UART_TXD
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD
-set_location_assignment PIN_K16 -to UART_RXD
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name QII_AUTO_PACKED_REGISTERS "SPARSE AUTO"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name STATE_MACHINE_PROCESSING "ONE-HOT"
+set_global_assignment -name SAFE_STATE_MACHINE OFF
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to CLOCK_50
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_global_assignment -name REMOVE_DUPLICATE_REGISTERS OFF
+set_global_assignment -name SYNTH_MESSAGE_LEVEL MEDIUM
+set_global_assignment -name FINAL_PLACEMENT_OPTIMIZATION ALWAYS
+set_global_assignment -name SEED 1
+set_global_assignment -name ROUTER_REGISTER_DUPLICATION ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name SLD_FILE db/signal_tap_auto_stripped.stp

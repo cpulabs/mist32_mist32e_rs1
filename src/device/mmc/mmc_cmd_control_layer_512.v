@@ -357,27 +357,7 @@ module mmc_cmd_control_layer_512(
 	wire [7:0] spi_read_data;
 	wire spi_read_info_miso;
 	
-	/*
-	mmc_spi_transfer_layer SPI_MASTER(
-		//System
-		.iCLOCK(iCLOCK),
-		.inRESET(inRESET),
-		.iRESET_SYNC(1'b0),
-		//Master - Req	
-		.iMASTER_REQ(spi_write_valid && !spi_request_busy),
-		.iMASTER_SPI_CLOCK_MODE(!(b_main_current_state == PL_MMC_CTRL_INIT || b_main_current_state == PL_MMC_CTRL_CMD0)),	//0:Initial Clock | 1:High Speed Clock
-		.oMASTER_LOCK(spi_request_busy),
-		.iMASTER_DATA(spi_write_data),
-		//Master - Data Rec
-		.oMASTER_VALID(spi_read_valid),
-		.oMASTER_DATA(spi_read_data),
-		.oMASTER_INFO_MISO(spi_read_info_miso),
-		//SPI
-		.oSPI_CLK(oMMC_CLK),
-		.oSPI_MOSI(oMMC_MOSI),
-		.iSPI_MISO(iMMC_MISO)
-	);
-	*/
+
 	mmc_spi_async_transfer_layer SPI_MASTER(
 		//System
 		.iCLOCK(iCLOCK),

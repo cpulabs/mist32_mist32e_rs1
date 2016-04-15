@@ -32,8 +32,6 @@ module vga_command_controller(
 										
 	//State Controller				
 	reg [1:0] main_state;
-	reg [6:0] sub_state;
-	reg [13:0] req_addr;
 	reg [15:0] req_data;
 	reg [18:0] vram_addr;
 	//Font ROM
@@ -79,14 +77,10 @@ module vga_command_controller(
 	
 	always@(posedge iCLOCK or negedge inRESET)begin
 		if(!inRESET)begin
-			sub_state <= {7{1'b0}};
-			req_addr <= {14{1'b0}};
 			req_data <= {16{1'b0}};
 			vram_addr <= {19{1'b0}};
 		end
 		else if(iRESET_SYNC)begin
-			sub_state <= {7{1'b0}};
-			req_addr <= {14{1'b0}};
 			req_data <= {16{1'b0}};
 			vram_addr <= {19{1'b0}};
 		end
@@ -105,7 +99,6 @@ module vga_command_controller(
 									vram_addr <= iBUSMOD_ADDR - 32'h00000100;
 								end
 							end
-							sub_state <= {7{1'b0}};
 						end
 					PL_STT_CLEAR : //DisplayClear
 						begin

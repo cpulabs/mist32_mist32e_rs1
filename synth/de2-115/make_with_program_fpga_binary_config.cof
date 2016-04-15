@@ -6,7 +6,7 @@
 	<width>1</width>
 	<mode>7</mode>
 	<hex_block>
-		<hex_filename>C:/cygwin64/home/MIST32_MIST32ERS1/synth/de2-115/soft/03_tetris.hex</hex_filename>
+		<hex_filename>C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de2-115/soft/key_display_mul.hex</hex_filename>
 		<hex_addressing>relative</hex_addressing>
 		<hex_offset>4194304</hex_offset>
 	</hex_block>

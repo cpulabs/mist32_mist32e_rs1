@@ -6,7 +6,7 @@
 	<width>1</width>
 	<mode>7</mode>
 	<hex_block>
-		<hex_filename>C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/soft/key_display_mul.hex</hex_filename>
+		<hex_filename>C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/soft/03_tetris.hex</hex_filename>
 		<hex_addressing>relative</hex_addressing>
 		<hex_offset>4194304</hex_offset>
 	</hex_block>
@@ -15,7 +15,7 @@
 		<user_name>Page_0</user_name>
 		<page_flags>1</page_flags>
 		<bit0>
-			<sof_filename>C:/cygwin64/home/Takahiro/MIST32_MIST32ERS0/synth/de0-cv/output_files/top_de0_cv.sof</sof_filename> 
+			<sof_filename>C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof</sof_filename> 
 		</bit0>
 	</sof_data>
 	<version>9</version>

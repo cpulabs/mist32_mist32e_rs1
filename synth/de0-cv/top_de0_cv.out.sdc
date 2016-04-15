@@ -18,9 +18,9 @@
 
 ## VENDOR  "Altera"
 ## PROGRAM "Quartus Prime"
-## VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
+## VERSION "Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition"
 
-## DATE    "Wed Nov 25 12:32:51 2015"
+## DATE    "Sat Apr 16 01:23:03 2016"
 
 ##
 ## DEVICE  "5CEBA4F23C7"
@@ -40,6 +40,8 @@ set_time_format -unit ns -decimal_places 3
 #**************************************************************
 
 create_clock -name {MAIN_CLOCK} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLOCK_50}]
+create_clock -name {sci_top:DEVICE_SCI|uart:UARTMOD|uart_receiver:UART_RECEIVER|b_bd_clock} -period 216.000 -waveform { 0.000 108.000 } 
+create_clock -name {sci_top:DEVICE_SCI|uart:UARTMOD|uart_transmitter:UART_TRANSMITTER|b_bd_clock} -period 216.000 -waveform { 0.000 108.000 } 
 
 
 #**************************************************************
@@ -61,18 +63,6 @@ create_generated_clock -name {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|
 # Set Clock Uncertainty
 #**************************************************************
 
-set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
-set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
-set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
-set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
-set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {MAIN_CLOCK}]  0.110  
-set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {MAIN_CLOCK}]  0.110  
-set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
-set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
-set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
-set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
-set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {MAIN_CLOCK}]  0.110  
-set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {MAIN_CLOCK}]  0.110  
 set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
 set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
 set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
@@ -85,22 +75,34 @@ set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_in
 set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
 set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {MAIN_CLOCK}]  0.110  
 set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {MAIN_CLOCK}]  0.110  
-set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
-set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
 set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
 set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
 set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {MAIN_CLOCK}] -setup 0.100  
 set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {MAIN_CLOCK}] -hold 0.060  
 set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {MAIN_CLOCK}] -setup 0.100  
 set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {MAIN_CLOCK}] -hold 0.060  
-set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
-set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
+set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
+set_clock_uncertainty -rise_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
 set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
 set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
 set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {MAIN_CLOCK}] -setup 0.100  
 set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {MAIN_CLOCK}] -hold 0.060  
 set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {MAIN_CLOCK}] -setup 0.100  
 set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {MAIN_CLOCK}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
+set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  0.110  
+set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {MAIN_CLOCK}]  0.110  
+set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {MAIN_CLOCK}]  0.110  
+set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
+set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
+set_clock_uncertainty -rise_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {MAIN_CLOCK}]  0.110  
+set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {MAIN_CLOCK}]  0.110  
+set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
+set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -rise_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -setup 0.080  
+set_clock_uncertainty -fall_from [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -fall_to [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}] -hold 0.060  
 
 
 #**************************************************************
@@ -125,6 +127,10 @@ set_clock_uncertainty -fall_from [get_clocks {MAIN_CLOCK}] -fall_to [get_clocks 
 # Set False Path
 #**************************************************************
 
+set_false_path  -from  [get_clocks {MAIN_CLOCK}]  -to  [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]}]
+set_false_path  -from  [get_clocks {MAIN_CLOCK}]  -to  [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk}]
+set_false_path  -from  [get_clocks {MAIN_CLOCK}]  -to  [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]
+set_false_path  -from  [get_clocks {GLOBAL_CLOCK|VGA_PLL|system_pll_inst|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk}]  -to  [get_clocks {MAIN_CLOCK}]
 
 
 #**************************************************************

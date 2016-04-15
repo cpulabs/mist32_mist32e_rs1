@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Feb 12 04:27:04 2016
+Analysis & Synthesis Status : Successful - Sat Apr 16 02:19:31 2016
 Quartus Prime Version : 15.1.1 Build 189 12/02/2015 SJ Lite Edition
 Revision Name : top_de2_115
 Top-level Entity Name : top_de2_115
 Family : Cyclone IV E
-Total logic elements : 40,092
-    Total combinational functions : 29,968
-    Dedicated logic registers : 16,863
-Total registers : 16863
+Total logic elements : 40,148
+    Total combinational functions : 30,018
+    Dedicated logic registers : 16,880
+Total registers : 16880
 Total pins : 189
 Total virtual pins : 0
-Total memory bits : 2,405,312
+Total memory bits : 2,406,336
 Embedded Multiplier 9-bit elements : 8
 Total PLLs : 1

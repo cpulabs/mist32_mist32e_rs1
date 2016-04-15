@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Feb 03 19:04:49 2016
+Analysis & Synthesis Status : Successful - Sat Apr 16 01:26:52 2016
 Quartus Prime Version : 15.1.1 Build 189 12/02/2015 SJ Lite Edition
 Revision Name : top_de0_cv
 Top-level Entity Name : top_de0_cv
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 14913
+Total registers : 10729
 Total pins : 167
 Total virtual pins : 0
-Total block memory bits : 2,170,744
+Total block memory bits : 2,175,864
 Total DSP Blocks : 3
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

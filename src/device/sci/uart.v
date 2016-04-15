@@ -113,6 +113,8 @@ module uart(
 	*********************************************/
 	assign oTX_TRANSMIT = !transmitter_tx_enable && !transmitter_tx_busy;
 	assign oRX_RECEIVE = receiver_rx_enable;
+	
+	assign oIRQ_VALID = 1'h0;
 
 	
 endmodule
