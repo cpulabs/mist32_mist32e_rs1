@@ -54,7 +54,7 @@ module vga_command_controller(
 						begin
 							if(iBUSMOD_REQ)begin
 								if(iBUSMOD_ADDR == 32'h00000000)begin
-									main_state <= PL_STT_BITMAP;//PL_STT_CLEAR;	//for simulate	//PL_STT_BITMAP;
+									main_state <= PL_STT_CLEAR;	//for simulate	//PL_STT_BITMAP;
 								end
 								else if(iBUSMOD_ADDR >= 32'h00000100 && iBUSMOD_ADDR < 19'h4B0ff)begin
 									main_state <= PL_STT_BITMAP;
