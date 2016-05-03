@@ -32,6 +32,7 @@ module mmc_cmd_control_layer_512(
 	/****************************************
 	Busy
 	****************************************/
+	wire spi_txrx_busy;
 	wire system_busy = spi_txrx_busy;
 	
 	/****************************************
@@ -53,13 +54,26 @@ module mmc_cmd_control_layer_512(
 	wire spi_txrx_cmd17_start = !system_busy && iCMD_REQ && iCMD_COMMAND == 4'h4;
 	wire spi_txrx_cmd24_start = !system_busy && iCMD_REQ && iCMD_COMMAND == 4'h5;
 
+	wire cmd_init_done;
+	wire cmd0_done;
+	wire cmd1_done;
+	wire cmd16_done;
+	wire cmd17_done;
+	wire cmd24_done;
+	
+	wire spi_request_busy;
+
+	wire spi_read_valid;
+	wire [7:0] spi_read_data;
+	wire spi_read_info_miso;
+	
 	wire command_done = cmd_init_done || cmd0_done || cmd1_done || cmd16_done || cmd17_done || cmd24_done;
 
-	
-	wire spi_txrx_busy = (b_main_state != PL_MMC_CTRL_IDLE);//b_spi_resp_wait || (b_spi_txrx_command != L_PARAM_SPI_TXRX_STT_IDLE);// || !iMMC_MISO;
-
-
 	reg [2:0] b_main_state;
+	assign spi_txrx_busy = (b_main_state != PL_MMC_CTRL_IDLE);//b_spi_resp_wait || (b_spi_txrx_command != L_PARAM_SPI_TXRX_STT_IDLE);// || !iMMC_MISO;
+
+
+	
 	always@(posedge iCLOCK or negedge inRESET)begin
 		if(!inRESET)begin
 			b_main_state <= PL_MMC_CTRL_IDLE;
@@ -143,13 +157,6 @@ module mmc_cmd_control_layer_512(
 	/***************************************************
 	CMD Module
 	***************************************************/
-	wire cmd_init_done;
-	wire cmd0_done;
-	wire cmd1_done;
-	wire cmd16_done;
-	wire cmd17_done;
-	wire cmd24_done;
-
 	wire cmd_init_mmc_req;
 	wire cmd_init_mmc_cs;
 	wire [7:0] cmd_init_mmc_data;
@@ -351,13 +358,6 @@ module mmc_cmd_control_layer_512(
 	/***************************************************
 	SPI Controlor
 	***************************************************/
-	wire spi_request_busy;
-
-	wire spi_read_valid;
-	wire [7:0] spi_read_data;
-	wire spi_read_info_miso;
-	
-
 	mmc_spi_async_transfer_layer SPI_MASTER(
 		//System
 		.iCLOCK(iCLOCK),

@@ -10,8 +10,8 @@ module mmc_cmd_control_layer_cmd24(
 		input wire [31:0] iCMD_ADDR,
 		output wire oCMD_END,
 		//Buffer
-		output [6:0] oBUFF_ADDR,
-		input [31:0] iBUFF_DATA,
+		output wire [6:0] oBUFF_ADDR,
+		input wire [31:0] iBUFF_DATA,
 		//Write
 		output wire oMMC_REQ,
 		input wire iMMC_BUSY,
@@ -254,17 +254,6 @@ module mmc_cmd_control_layer_cmd24(
 
 
 endmodule
-
-
-
-
-
-
-
-
-
-
-
 
 
 `default_nettype wire 

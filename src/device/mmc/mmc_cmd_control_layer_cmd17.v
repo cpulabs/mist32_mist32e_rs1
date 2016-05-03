@@ -10,9 +10,9 @@ module mmc_cmd_control_layer_cmd17(
 		input wire [31:0] iCMD_ADDR,
 		output wire oCMD_END,
 		//Buffer
-		output oBUFF_REQ,
-		output [6:0] oBUFF_ADDR,
-		output [31:0] oBUFF_DATA,
+		output wire oBUFF_REQ,
+		output wire [6:0] oBUFF_ADDR,
+		output wire [31:0] oBUFF_DATA,
 		//Write
 		output wire oMMC_REQ,
 		input wire iMMC_BUSY,
@@ -37,6 +37,16 @@ module mmc_cmd_control_layer_cmd17(
 	
 	localparam PL_MAIN_STT_END = 4'h8;
 
+	
+	//Data + CRC
+	reg [1:0] b_receive_state;
+	reg [9:0] b_receive_counter;
+	
+	localparam PL_RECEIVE_STT_IDLE = 2'h0;
+	localparam PL_RECEIVE_STT_DATA_GET = 2'h1;
+	localparam PL_RECEIVE_STT_CRC_GET = 2'h2;
+	localparam PL_RECEIVE_STT_END = 2'h3;
+	
 	function [7:0] func_cmd_flame;
 		input [2:0] func_select;
 		input [31:0] func_addr;
@@ -184,14 +194,6 @@ module mmc_cmd_control_layer_cmd17(
 
 
 	//Data + CRC
-	reg [1:0] b_receive_state;
-	reg [9:0] b_receive_counter;
-
-	localparam PL_RECEIVE_STT_IDLE = 2'h0;
-	localparam PL_RECEIVE_STT_DATA_GET = 2'h1;
-	localparam PL_RECEIVE_STT_CRC_GET = 2'h2;
-	localparam PL_RECEIVE_STT_END = 2'h3;
-	
 	always@(posedge iCLOCK or negedge inRESET)begin
 		if(!inRESET)begin
 			b_receive_state <= PL_RECEIVE_STT_IDLE;

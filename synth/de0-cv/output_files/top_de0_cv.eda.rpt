@@ -1,5 +1,5 @@
 EDA Netlist Writer report for top_de0_cv
-Sat Apr 16 01:46:52 2016
+Sun May 01 17:12:35 2016
 Quartus Prime Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Apr 16 01:46:52 2016 ;
+; EDA Netlist Writer Status ; Successful - Sun May 01 17:12:35 2016 ;
 ; Revision Name             ; top_de0_cv                            ;
 ; Top-level Entity Name     ; top_de0_cv                            ;
 ; Family                    ; Cyclone V                             ;
@@ -67,13 +67,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                             ;
-+--------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                        ;
-+--------------------------------------------------------------------------------------------------------+
-; C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/simulation/modelsim/top_de0_cv.svo ;
-+--------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                          ;
++-----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                     ;
++-----------------------------------------------------------------------------------------------------+
+; C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/simulation/modelsim/top_de0_cv.svo ;
++-----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -82,14 +82,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 01:46:35 2016
+    Info: Processing started: Sun May 01 17:12:14 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off top_de0_cv -c top_de0_cv
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
-Info (204019): Generated file top_de0_cv.svo in folder "C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_de0_cv.svo in folder "C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1284 megabytes
-    Info: Processing ended: Sat Apr 16 01:46:53 2016
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 1313 megabytes
+    Info: Processing ended: Sun May 01 17:12:36 2016
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:20
 
 

@@ -3,14 +3,17 @@ default:
 	
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv tb/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv model/sim_memory_model/*.sv
+	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv model/sim_uart_receiver_model/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv model/altera/*.v
 	
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/dev_interconnect/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/device/keyboard/*.sv
+	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/device/mmc/*.sv
+	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/device/mmc/*.v
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/device/vga/*.sv
+	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/device/sci/*.v
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/memory_if/*.sv
-	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../src/rom/*.sv
 
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/core/*.sv
@@ -25,11 +28,8 @@ default:
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/core/pipeline_control/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/lib/*.sv
 	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/peripheral_interface_controller/*.sv
-	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/primitive/altera_primitive_sync_fifo_showahead_32in_32out_8depth/*.v
-	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/primitive/altera_primitive_sync_fifo_showahead_97in_97out_32depth/*.v
-	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/src/primitive/ram_512bit_16word/*.v
-	
-	
-	
+	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/sim/ip/altera_primitive_dualram_512bit_16word/*.v
+	vlog -work work +incdir+../../mist32e10fa/src/include +incdir+../../mist32e10fa/src/core/include -sv ../../mist32e10fa/sim/ip/altera_primitive_sync_fifo_showahead_97in_97out_32depth/*.v
+
 	vsim -c -voptargs="+acc" tb_mist32_mist32e_system -do "radix -hexadecimal; log -r /*; run -all; finish"
 

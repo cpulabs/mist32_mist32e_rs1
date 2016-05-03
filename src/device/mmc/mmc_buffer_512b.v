@@ -4,15 +4,15 @@
 `default_nettype none
 
 module mmc_buffer_512b(
-		input iCLOCK,
+		input wire iCLOCK,
 		//Write
-		input iWR_REQ,
-		input [3:0] iWR_MASK,		//0=Write Active | 1=Write Protect
-		input [6:0] iWR_ADDR,
-		input [31:0] iWR_DATA,
+		input wire iWR_REQ,
+		input wire [3:0] iWR_MASK,		//0=Write Active | 1=Write Protect
+		input wire [6:0] iWR_ADDR,
+		input wire [31:0] iWR_DATA,
 		//Read
-		input [6:0] iRD_ADDR,
-		output [31:0] oRD_DATA
+		input wire [6:0] iRD_ADDR,
+		output wire [31:0] oRD_DATA
 	);
 	
 	function [31:0] func_write_mask;

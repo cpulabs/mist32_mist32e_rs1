@@ -3,35 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK'
-Slack : 1.640
+Slack : 1.525
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 10.038
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
-Slack : 43.222
+Slack : 11.622
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK'
 Slack : 0.386
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.403
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Hold 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
 Slack : 0.429
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 48.236
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
-Slack : 1.002
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK'
@@ -39,99 +23,55 @@ Slack : 9.622
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 19.708
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.566
+Slack : 19.709
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK'
-Slack : 3.233
+Slack : 3.175
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 11.058
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 43.854
+Slack : 12.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK'
 Slack : 0.339
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.355
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Hold 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 0.397
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 48.484
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.906
+Slack : 0.396
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK'
-Slack : 9.641
+Slack : 9.642
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 19.708
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.499
+Slack : 19.710
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK'
-Slack : 7.966
+Slack : 7.972
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 14.761
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 46.769
+Slack : 15.616
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK'
 Slack : 0.174
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.182
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Hold 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 0.189
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 49.334
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.490
+Slack : 0.188
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK'
-Slack : 9.349
+Slack : 9.347
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GLOBAL_CLOCK|VGA_PLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 19.780
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.463
+Slack : 19.779
 TNS   : 0.000
 
 ------------------------------------------------------------

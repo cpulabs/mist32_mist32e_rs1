@@ -49,7 +49,17 @@ module mmc_top_control_layer_512(
 	wire this_buffer_read = iCMD_REQ && (iCMD_COMMAND == 3'h3);
 	wire this_buffer_write = iCMD_REQ && (iCMD_COMMAND == 3'h4);
 	
+	wire mmc_command_cc_cmd_busy;
 	wire this_lock = mmc_command_cc_cmd_busy;
+	
+	wire mmc_command_cc_cmd_success;
+	wire mmc_command_cc_cmd_error;
+	wire [4:0] mmc_command_cc_cmd_error_code;
+	
+	reg [3:0] b_state;
+	
+	
+	wire [31:0] mem_port_rd_data;
 	
 	/************************************************************
 	IRQ
@@ -120,7 +130,6 @@ module mmc_top_control_layer_512(
 	************************************************************/
 	reg bn_idle;
 	reg b_cmd_end;
-	reg [3:0] b_state;
 	reg b_wait;
 	reg [31:0] b_addr;
 	reg [31:0] b_data;
@@ -227,10 +236,6 @@ module mmc_top_control_layer_512(
 	wire mmc_command_cc_cmd_req = !b_wait && bn_idle;
 	wire [3:0] mmc_command_cc_cmd_command = b_state;
 	wire [31:0]mmc_command_cc_cmd_addr = b_addr;
-	wire mmc_command_cc_cmd_busy;
-	wire mmc_command_cc_cmd_success;
-	wire mmc_command_cc_cmd_error;
-	wire [4:0] mmc_command_cc_cmd_error_code;
 	
 	
 	mmc_cmd_control_layer_512 MMC_COMMAND_CONTROLLER(
@@ -270,7 +275,6 @@ module mmc_top_control_layer_512(
 	reg [6:0] mem_port_wr_addr;
 	reg [31:0] mem_port_wr_data;
 	reg [6:0] mem_port_rd_addr;
-	wire [31:0] mem_port_rd_data;
 	
 	always @* begin
 		if(!mem_select)begin	

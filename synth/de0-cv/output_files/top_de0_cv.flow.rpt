@@ -1,5 +1,5 @@
 Flow report for top_de0_cv
-Sat Apr 16 01:46:52 2016
+Sun May 01 17:12:35 2016
 Quartus Prime Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Apr 16 01:46:52 2016       ;
+; Flow Status                     ; Successful - Sun May 01 17:12:35 2016       ;
 ; Quartus Prime Version           ; 15.1.1 Build 189 12/02/2015 SJ Lite Edition ;
 ; Revision Name                   ; top_de0_cv                                  ;
 ; Top-level Entity Name           ; top_de0_cv                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 15,272 / 18,480 ( 83 % )                    ;
-; Total registers                 ; 12796                                       ;
+; Logic utilization (in ALMs)     ; 16,621 / 18,480 ( 90 % )                    ;
+; Total registers                 ; 12910                                       ;
 ; Total pins                      ; 167 / 224 ( 75 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,131,832 / 3,153,920 ( 68 % )              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/16/2016 01:23:12 ;
+; Start date & time ; 05/01/2016 16:44:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_de0_cv          ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ agreement for further details.
 ; Assignment Name                              ; Value                                                                                                                              ; Default Value ; Entity Name     ; Section Id     ;
 +----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------------+-----------------+----------------+
 ; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP          ; On                                                                                                                                 ; Off           ; --              ; --             ;
-; COMPILER_SIGNATURE_ID                        ; 740601539809.146073739234244                                                                                                       ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID                        ; 740601539809.146208865652696                                                                                                       ; --            ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                       ; Systemverilog Hdl                                                                                                                  ; --            ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                          ; ModelSim-Altera (SystemVerilog)                                                                                                    ; <None>        ; --              ; --             ;
 ; ENABLE_SIGNALTAP                             ; Off                                                                                                                                ; --            ; --              ; --             ;
@@ -139,12 +139,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:03:33     ; 2.6                     ; 1502 MB             ; 00:05:37                           ;
-; Fitter                    ; 00:16:58     ; 1.6                     ; 3548 MB             ; 00:31:04                           ;
-; Assembler                 ; 00:00:19     ; 1.0                     ; 1111 MB             ; 00:00:19                           ;
-; TimeQuest Timing Analyzer ; 00:01:47     ; 3.0                     ; 1996 MB             ; 00:04:12                           ;
-; EDA Netlist Writer        ; 00:00:17     ; 1.0                     ; 1284 MB             ; 00:00:17                           ;
-; Total                     ; 00:22:54     ; --                      ; --                  ; 00:41:29                           ;
+; Analysis & Synthesis      ; 00:03:52     ; 2.1                     ; 1420 MB             ; 00:05:34                           ;
+; Fitter                    ; 00:20:26     ; 1.6                     ; 3521 MB             ; 00:32:26                           ;
+; Assembler                 ; 00:00:23     ; 1.0                     ; 1125 MB             ; 00:00:20                           ;
+; TimeQuest Timing Analyzer ; 00:02:24     ; 3.2                     ; 2024 MB             ; 00:04:19                           ;
+; EDA Netlist Writer        ; 00:00:21     ; 1.0                     ; 1313 MB             ; 00:00:19                           ;
+; Total                     ; 00:27:26     ; --                      ; --                  ; 00:42:58                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

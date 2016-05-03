@@ -1,5 +1,5 @@
 Assembler report for top_de0_cv
-Sat Apr 16 01:44:34 2016
+Sun May 01 17:09:33 2016
 Quartus Prime Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition
 
 
@@ -10,8 +10,8 @@ Quartus Prime Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof
-  6. Assembler Device Options: C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.pof
+  5. Assembler Device Options: C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof
+  6. Assembler Device Options: C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.pof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Apr 16 01:44:34 2016 ;
+; Assembler Status      ; Successful - Sun May 01 17:09:33 2016 ;
 ; Revision Name         ; top_de0_cv                            ;
 ; Top-level Entity Name ; top_de0_cv                            ;
 ; Family                ; Cyclone V                             ;
@@ -54,37 +54,37 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                       ;
-+-------------------------------------------------------------------------------------------------+
-; File Name                                                                                       ;
-+-------------------------------------------------------------------------------------------------+
-; C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof ;
-; C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.pof ;
-+-------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                    ;
++----------------------------------------------------------------------------------------------+
+; File Name                                                                                    ;
++----------------------------------------------------------------------------------------------+
+; C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof ;
+; C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.pof ;
++----------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof ;
-+----------------+----------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                  ;
-+----------------+----------------------------------------------------------------------------------------------------------+
-; Device         ; 5CEBA4F23C7                                                                                              ;
-; JTAG usercode  ; 0x0897D293                                                                                               ;
-; Checksum       ; 0x0897D293                                                                                               ;
-+----------------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.sof ;
++----------------+-------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                               ;
++----------------+-------------------------------------------------------------------------------------------------------+
+; Device         ; 5CEBA4F23C7                                                                                           ;
+; JTAG usercode  ; 0x08BD0E2B                                                                                            ;
+; Checksum       ; 0x08BD0E2B                                                                                            ;
++----------------+-------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/cygwin64/home/Takahiro/book_test/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.pof ;
-+--------------------+------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                              ;
-+--------------------+------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS64                                                                                               ;
-; JTAG usercode      ; 0x00000000                                                                                           ;
-; Checksum           ; 0x6D77831D                                                                                           ;
-; Compression Ratio  ; 1                                                                                                    ;
-+--------------------+------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/cygwin64/home/all_test/update/mist32_mist32e_rs1/synth/de0-cv/output_files/top_de0_cv.pof ;
++--------------------+---------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                           ;
++--------------------+---------------------------------------------------------------------------------------------------+
+; Device             ; EPCS64                                                                                            ;
+; JTAG usercode      ; 0x00000000                                                                                        ;
+; Checksum           ; 0x6D27EB22                                                                                        ;
+; Compression Ratio  ; 1                                                                                                 ;
++--------------------+---------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -93,13 +93,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 15.1.1 Build 189 12/02/2015 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 01:44:15 2016
+    Info: Processing started: Sun May 01 17:09:10 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top_de0_cv -c top_de0_cv
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1111 megabytes
-    Info: Processing ended: Sat Apr 16 01:44:34 2016
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 1125 megabytes
+    Info: Processing ended: Sun May 01 17:09:34 2016
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:21
 
 
